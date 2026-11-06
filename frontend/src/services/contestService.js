@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "http://localhost:8000/api/v1/contest",
+    //baseURL: "http://localhost:8000/api/v1/contest",
+    baseURL: "https://devmeet-backend-t592.onrender.com/api/v1/contest",
+
 });
 
 API.interceptors.request.use((config) => {
@@ -29,6 +31,8 @@ export const getContest = (contestCode) =>
 
 export const getLeaderboard = (contestCode) =>
     API.get(`/leaderboard/${contestCode}`);
+
+
 
 // import axios from "axios";
 

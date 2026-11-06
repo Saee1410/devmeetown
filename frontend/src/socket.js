@@ -1,6 +1,7 @@
 import { io } from "socket.io-client";
+import server from "./environment";
 
-const socket = io("http://localhost:8000", {
+const socket = io(server, {
   transports: ["websocket", "polling"],
   withCredentials: true,
 });

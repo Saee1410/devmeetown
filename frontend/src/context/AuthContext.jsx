@@ -3,7 +3,8 @@ import axios from "axios";
 
 export const AuthContext = createContext();
 
-const BACKEND_URL = "http://localhost:8000/api/v1/users";
+//const BACKEND_URL = "http://localhost:8000/api/v1/users";
+const BACKEND_URL = "https://devmeet-backend-t592.onrender.com/api/v1/users";
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);

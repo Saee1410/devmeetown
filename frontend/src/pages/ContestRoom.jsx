@@ -88,7 +88,8 @@ function ContestRoom() {
                 );
 
                 const response = await axios.get(
-                    `http://localhost:8000/api/v1/contest/${contestCode}`,
+                   // `http://localhost:8000/api/v1/contest/${contestCode}`,
+                   `https://devmeet-backend-t592.onrender.com/api/v1/contest/${contestCode}`,
                     {
                         headers: {
                             Authorization:
@@ -173,7 +174,8 @@ const handleStartContest = async () => {
             localStorage.getItem("token");
 
         const response = await axios.post(
-            "http://localhost:8000/api/v1/contest/start/${contestCode}",
+           // "http://localhost:8000/api/v1/contest/start/${contestCode}",
+           `https://devmeet-backend-t592.onrender.com/api/v1/contest/start/${contestCode}`,
             {
                 contestCode: contestCode,
             },
@@ -420,7 +422,8 @@ const handleStartContest = async () => {
                     localStorage.getItem("token");
 
                 const response = await axios.get(
-                    `http://localhost:8000/api/v1/contest/leaderboard/${contestCode}`,
+                   // `http://localhost:8000/api/v1/contest/leaderboard/${contestCode}`,
+                   `https://devmeet-backend-t592.onrender.com/api/v1/contest/leaderboard/${contestCode}`,
                     {
                         headers: {
                             Authorization:
