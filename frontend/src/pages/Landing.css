@@ -1,0 +1,157 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.landingPageContainer {
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../src/assets/bg2.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+nav {
+  padding: 1.5rem 4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navHeader h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navlist {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navlist p {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navlist p:hover {
+  color: #ff9a00;
+}
+
+.navlist button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #ff9a00;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.landingMainContainer {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6rem;
+  gap: 4rem;
+}
+
+/* Left Content */
+.Text {
+  flex: 1;
+  max-width: 650px;
+}
+
+.Text h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.Text h1 span {
+  color: #ff9a00;
+}
+
+.Text p {
+  font-size: 1.3rem;
+  color: #d6d6d6;
+  margin-bottom: 2rem;
+}
+
+.btn button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background: #ff9a00;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.btn button:hover {
+  transform: translateY(-3px);
+}
+
+/* Right Image */
+.img {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+
+  border-radius: 20px;
+
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .landingMainContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .Text h1 {
+    font-size: 2.5rem;
+  }
+
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  .navlist {
+    gap: 1rem;
+  }
+}
