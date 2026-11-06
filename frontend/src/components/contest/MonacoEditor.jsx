@@ -231,7 +231,8 @@ function MonacoEditor({ roomId, questionId }) {
       });
 
       const response = await axios.post(
-        "http://localhost:8000/api/compile",
+       // "http://localhost:8000/api/compile",
+       "https://devmeet-backend-t592.onrender.com/api/compile",
         {
           code,
           language,
@@ -361,7 +362,8 @@ function MonacoEditor({ roomId, questionId }) {
       );
 
       const response = await axios.post(
-        "http://localhost:8000/api/v1/contest/submit",
+        //"http://localhost:8000/api/v1/contest/submit",
+        "https://devmeet-backend-t592.onrender.com/api/v1/contest/submit",
         {
           contestCode:
             roomId.trim().toUpperCase(),
