@@ -1,7 +1,7 @@
 import './App.css';
 import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
-import { Landing } from './pages/landing';
-import Authentication from './pages/authentication';
+import { Landing } from './pages/Landing';
+import Authentication from './pages/Authentication';
 import { AuthProvider } from './context/AuthContext';
 import VideoMeet from './pages/VideoMeet';
 import Home from './pages/Home';
@@ -33,6 +33,7 @@ function App() {
             <Route path='/contest/join' element={<JoinContest />} />
             <Route path='/contest/:contestCode' element={<ContestRoom />} />
             <Route path='/contestcode' element={<ContestPage />} />
+
        </Routes>
 
       </Router>
